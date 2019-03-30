@@ -94,10 +94,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _add__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
 
 
+
 Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["addToDom"])('Who needs jQuery?');
-Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["addToDom"])("5 + 8 = ".concat(Object(_add__WEBPACK_IMPORTED_MODULE_1__["default"])(5, 8)));
-Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["makeElement"])('p', 'This is a paragraph that has changed');
+
+Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["addToDom"])(`5 + 8 = ${Object(_add__WEBPACK_IMPORTED_MODULE_1__["default"])(5, 8)}`);
+
+Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["makeElement"])('p', 'This is a paragraph');
+
 _helpers__WEBPACK_IMPORTED_MODULE_0__["default"].makeElement('h2', 'This is sQuery');
+
 
 /***/ }),
 /* 1 */
@@ -107,22 +112,30 @@ _helpers__WEBPACK_IMPORTED_MODULE_0__["default"].makeElement('h2', 'This is sQue
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addToDom", function() { return addToDom; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "makeElement", function() { return makeElement; });
-function addToDom(message) {
-  var root = document.getElementById('root');
-  var h1 = document.createElement('h1');
-  h1.innerText = message;
-  root.append(h1);
+function addToDom(message){
+    const root = document.getElementById('root');
+    const h1 = document.createElement('h1');
+
+    h1.innerText = message;
+
+    root.append(h1);
 }
-function makeElement(type, text) {
-  var root = document.getElementById('root');
-  var ele = document.createElement(type);
-  ele.innerText = text;
-  root.append(ele);
+
+function makeElement(type, text){
+    const root = document.getElementById('root');
+
+    const ele = document.createElement(type);
+
+    ele.innerText = text;
+
+    root.append(ele);
 }
+
 /* harmony default export */ __webpack_exports__["default"] = ({
-  addToDom: addToDom,
-  makeElement: makeElement
+    addToDom: addToDom,
+    makeElement: makeElement
 });
+
 
 /***/ }),
 /* 2 */
@@ -130,11 +143,12 @@ function makeElement(type, text) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-function add(x, y) {
-  return x + y;
+function add(x, y){
+    return  x + y;
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (add);
+
 
 /***/ })
 /******/ ]);
